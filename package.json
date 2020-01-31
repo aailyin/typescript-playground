@@ -1,0 +1,23 @@
+{
+  "name": "typescript-playground",
+  "version": "1.0.0",
+  "description": "TS playground repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aailyin/typescript-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aailyin/typescript-playground/issues"
+  },
+  "homepage": "https://github.com/aailyin/typescript-playground#readme",
+  "devDependencies": {
+    "typescript": "^3.7.5"
+  }
+}
