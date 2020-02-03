@@ -94,9 +94,7 @@ interface ComponentDecorator{
 
 
 function Component(config: ComponentDecorator) {
-    return function
-        <T extends { new(...args: any[]): object}>
-    (Constructor: T) {
+    return function<T extends {new(...args: any[]): object}>(Constructor: T) {
         return class extends Constructor {
             constructor(...args: any[]) {
                 super(...args);
@@ -196,4 +194,29 @@ if (validate(form)) {
     console.log('Valid: ', form);
 } else {    
     console.log('Error: ', form);
+}
+
+// ====================================
+// namespaces
+
+/// <reference path="form-namespace.ts" />
+
+namespace Form {
+    class MyForm {
+        private type: FormType = 'inline';
+        private state: FormState = 'active';
+    
+        constructor(
+            public emal: string
+        ) {}
+    
+        getInfo(): FormInfo {
+            return {
+                type: this.type,
+                state: this.state
+            }
+        }
+    }
+    
+    const form2 = new Form('v@mail.ru');
 }
